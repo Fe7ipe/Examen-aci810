@@ -9,7 +9,7 @@ import com.example.aci570_db.model.Person;
 import com.example.examen.helpers.PreferencesHelper;
 
 import android.os.Bundle;
-import android.app.Activity;
+import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,7 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class Aplicacion extends Activity {
+public class Aplicacion extends ListActivity {
 
 	public static final int REQUEST_CODE_ADD_PERSON = 1;
 	public static final int REQUEST_CODE_UPDATE_PERSON = 2;

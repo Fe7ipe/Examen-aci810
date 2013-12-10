@@ -6,9 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 
 import com.androidfinal.Aplicacion;
-import com.androidfinal.Chat;
 import com.androidfinal.Persona;
-import com.example.aci570_db.model.Mensaje;
 import com.example.aci570_db.model.Person;
 
 public class ListViewItemClickListener implements AdapterView.OnItemClickListener {
@@ -32,14 +30,5 @@ public class ListViewItemClickListener implements AdapterView.OnItemClickListene
 		}
 	}
 	
-	public void onItemClick2(AdapterView<?> parent, View view, int position, long id) {
-		Mensaje m = (Mensaje) parent.getItemAtPosition(position);
-		
-		if(m != null)
-		{
-			Intent in = new Intent(this.activity, Mensaje.class);
-			in.putExtra("mensaje", m);
-			this.activity.startActivityForResult(in, Chat.REQUEST_CODE_ADD_MENSAJE);			
-		}
-	}
+
 }

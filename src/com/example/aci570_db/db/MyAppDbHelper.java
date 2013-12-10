@@ -12,8 +12,8 @@ import com.example.aci570_db.db.MyAppContract.People;
 public class MyAppDbHelper extends SQLiteOpenHelper {
 
 	// If you change the database schema, you must increment the database version.
-    public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_NAME = "MyApp.db";
+    public static final int DATABASE_VERSION = 5;
+    public static final String DATABASE_NAME = "people.db";
     
 //  private static final String NULL_TYPE = " NULL";
 	private static final String TEXT_TYPE = " TEXT";
@@ -21,12 +21,15 @@ public class MyAppDbHelper extends SQLiteOpenHelper {
 //	private static final String REAL_TYPE = " REAL";
 //	private static final String BLOB_TYPE = " BLOB";
 	
+	
 	private static final String COMMA_SEPARATOR = ",";
 	
 	private static final String SQL_CREATE_PEOPLE =
 		    "CREATE TABLE " + People.TABLE_NAME + " (" +
 		    		People._ID + " INTEGER PRIMARY KEY," +
 		    		People.COLUMN_NAME_FIRST_NAME+ TEXT_TYPE + COMMA_SEPARATOR +
+		    		People.COLUMN_NAME_LAST_NAME + TEXT_TYPE + COMMA_SEPARATOR +
+		            People.COLUMN_NAME_EMAIL + TEXT_TYPE +
 		    
 		    " )";
 	
@@ -34,12 +37,6 @@ public class MyAppDbHelper extends SQLiteOpenHelper {
 		    "DROP TABLE IF EXISTS " + People.TABLE_NAME;
     
 	
-	private static final String SQL_CREATE_MENSAJE =
-		    "CREATE TABLE " + Message.TABLE_NAME + " (" +
-		    		Message._ID + " INTEGER PRIMARY KEY," +
-		    		Message.COLUMN_NAME_NOMBRE_MENSAJE + TEXT_TYPE + COMMA_SEPARATOR +
-		    
-		    " )";
 	
 	@SuppressWarnings("unused")
 	private static final String SQL_DROP_MENSAJE =
@@ -52,7 +49,7 @@ public class MyAppDbHelper extends SQLiteOpenHelper {
     
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_PEOPLE);
-        db.execSQL(SQL_CREATE_MENSAJE);
+        
     }
     
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -62,7 +59,6 @@ public class MyAppDbHelper extends SQLiteOpenHelper {
     	);
 
     	db.execSQL(SQL_DROP_PEOPLE);
-    	db.execSQL(SQL_CREATE_MENSAJE);
     	onCreate(db);
     }
     

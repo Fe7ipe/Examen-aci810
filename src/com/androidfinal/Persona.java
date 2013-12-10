@@ -5,6 +5,7 @@ import com.example.aci570_db.db.MyAppDataSource;
 import com.example.aci570_db.model.Person;
 
 import android.os.Bundle;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.support.v4.app.NavUtils;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 
 public class Persona extends Activity {
 
@@ -72,6 +74,7 @@ public class Persona extends Activity {
 	/**
 	 * Set up the {@link android.app.ActionBar}.
 	 */
+	@SuppressLint("NewApi")
 	private void setupActionBar() {
 
 		getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -147,14 +150,6 @@ public class Persona extends Activity {
 		this.setResult(RESULT_OK, i);
 		
 		this.finish();
-	}
-	
-	public void chatamigo(View view) {
-		
-		Intent msje = new Intent(this, Msje.class);
-		this.startActivity(msje);
-		
-	
 	}
 	
 	
