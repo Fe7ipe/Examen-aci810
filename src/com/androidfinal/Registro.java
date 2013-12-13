@@ -105,7 +105,7 @@ public class Registro extends Activity {
 				
 				Toast.makeText(this, "Perfil Actualizado!", Toast.LENGTH_LONG).show();
 				
-				Intent app = new Intent(this, MainActivity.class);
+				Intent app = new Intent(this, Aplicacion.class);
 				this.startActivity(app);
 			}
 			else
