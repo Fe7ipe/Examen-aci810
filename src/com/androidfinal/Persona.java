@@ -51,7 +51,7 @@ public class Persona extends Activity {
 			saveButton.setText("Update");
 			
 			Button deleteButton = (Button) this.findViewById(R.id.deleteButton);
-			deleteButton.setVisibility(Button.VISIBLE);
+			
 			deleteButton.setVisibility(Button.VISIBLE);
                         deleteButton.setText("Delete");
 			
