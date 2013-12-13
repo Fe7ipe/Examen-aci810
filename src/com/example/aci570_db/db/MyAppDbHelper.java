@@ -6,7 +6,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 
-import com.example.aci570_db.db.MyAppContract.Message;
 import com.example.aci570_db.db.MyAppContract.People;
 
 public class MyAppDbHelper extends SQLiteOpenHelper {
@@ -36,11 +35,6 @@ public class MyAppDbHelper extends SQLiteOpenHelper {
 	private static final String SQL_DROP_PEOPLE =
 		    "DROP TABLE IF EXISTS " + People.TABLE_NAME;
     
-	
-	
-	@SuppressWarnings("unused")
-	private static final String SQL_DROP_MENSAJE =
-		    "DROP TABLE IF EXISTS " + Message.TABLE_NAME;
 	
     
     public MyAppDbHelper(Context context) {

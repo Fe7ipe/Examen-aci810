@@ -54,8 +54,12 @@
             android:label="@string/title_activity_chat" >
         </activity>
         <activity
-            android:name="com.androidfinal.Msje"
-            android:label="@string/title_activity_msje" >
+            android:name="com.androidfinal.Informacion"
+            android:label="@string/title_activity_informacion" >
+        </activity>
+        <activity
+            android:name="com.androidfinal.Settings2"
+            android:label="@string/title_activity_settings2" >
         </activity>
     </application>
 

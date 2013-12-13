@@ -15,9 +15,4 @@ public final class MyAppContract {
 		public static final String COLUMN_NAME_EMAIL = "email";
 	}
 	
-	public static abstract class Message implements BaseColumns {
-		public static final String TABLE_NAME = "msje";
-		public static final String COLUMN_NAME_NOMBRE_MENSAJE = "nombre_mensaje";
-
-	}
 }

@@ -124,4 +124,15 @@ public class Aplicacion extends ListActivity {
 		Intent i = new Intent(this, Persona.class);
 		this.startActivityForResult(i, REQUEST_CODE_ADD_PERSON);
 	}
+	
+	public void contactarBoton(View view) {
+		Intent i = new Intent(this, Settings.class);
+		this.startActivity(i);
+	}
+	
+	public void informacionboton(View view) {
+		Intent i = new Intent(this, Informacion.class);
+		this.startActivity(i);
+	}
+	
 }
